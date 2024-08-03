@@ -13,4 +13,9 @@ module top_module (
         endcase
     end
 
+    // Alternative way to implement the same logic
+    // always@(posedge clk)begin
+    //     Q <= j&(~Q) | (~k)&Q;
+    // end
+
 endmodule
