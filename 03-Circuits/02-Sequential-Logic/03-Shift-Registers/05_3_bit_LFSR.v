@@ -45,3 +45,10 @@ module top_module (
     i2(KEY[0],KEY[1],SW[2],q,LEDR[2]);
 
 endmodule
+
+// Alternative implementation of the 3-bit LFSR
+    // always@(posedge KEY[0])begin
+    //     LEDR[0] <= KEY[1]? SW[0] : LEDR[2];
+    //     LEDR[1] <= KEY[1]? SW[1] : LEDR[0];
+    //     LEDR[2] <= KEY[1]? SW[2] : LEDR[2]^LEDR[1];
+    // end

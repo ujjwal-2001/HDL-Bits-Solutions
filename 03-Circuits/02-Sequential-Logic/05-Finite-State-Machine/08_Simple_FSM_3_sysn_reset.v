@@ -5,7 +5,7 @@ module top_module(
     output out); //
 	
     reg [3:0] next_state, state;
-    // Uding One-hot encoding
+    // Using One-hot encoding
     parameter A=0, B=1, C=2, D=3;
 
     // State transition logic: Derive an equation for each state flip-flop.

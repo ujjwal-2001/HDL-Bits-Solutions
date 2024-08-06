@@ -14,5 +14,19 @@ module top_module (
         else
             q <= {in,q[3:1]};
     end
+
+    // Alternative implementation
+    // reg q0,q1,q2;
+    
+    // always@(posedge clk)begin
+    //     if(!resetn)
+    //     {out,q0,q1,q2} <= 4'h0;
+    //     else begin
+    //         q0 <= in;
+    //         q1 <= q0;
+    //         q2 <= q1;
+    //         out <= q2;
+    //     end
+    // end
     
 endmodule
