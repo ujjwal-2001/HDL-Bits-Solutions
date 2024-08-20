@@ -30,8 +30,10 @@ module top_module(
 
     always @(posedge clk, posedge areset) begin
         // State flip-flops with asynchronous reset
-        if(areset)
+        if(areset) begin
             state <= LEFT;
+            count <= 7'd0;
+        end
         else begin
             if(state == FALLING_R || state == FALLING_L)
                 count <= count +1;
